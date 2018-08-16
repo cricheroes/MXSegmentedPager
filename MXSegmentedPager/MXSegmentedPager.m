@@ -208,8 +208,9 @@
 #pragma mark <MXScrollViewDelegate>
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView == self.contentView && [self.delegate respondsToSelector:@selector(segmentedPager:didScrollWithParallaxHeader:)]) {
-        [self.delegate segmentedPager:self didScrollWithParallaxHeader:scrollView.parallaxHeader];
+    if (scrollView == self.contentView && [self.delegate respondsToSelector:@selector(segmentedPager:didScrollWithParallaxHeader:withOffset:)]) {
+        [self.delegate segmentedPager:self didScrollWithParallaxHeader:scrollView.parallaxHeader withOffset:scrollView.contentOffset];
+        
     }
 }
 

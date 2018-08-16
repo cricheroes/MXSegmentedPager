@@ -108,7 +108,7 @@ typedef NS_ENUM(NSInteger, MXSegmentedControlPosition) {
  @param segmentedPager A segmented-pager object in which the scrolling occurred.
  @param parallaxHeader The parallax-header that has scrolled.
  */
-- (void)segmentedPager:(MXSegmentedPager *)segmentedPager didScrollWithParallaxHeader:(MXParallaxHeader *)parallaxHeader;
+- (void)segmentedPager:(MXSegmentedPager *)segmentedPager didScrollWithParallaxHeader:(MXParallaxHeader *)parallaxHeader withOffset:(CGPoint)offset;
 
 /**
  Tells the delegate when dragging ended with the parallax header.
