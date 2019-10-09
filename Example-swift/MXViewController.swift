@@ -40,8 +40,8 @@ class MXViewController: MXSegmentedPagerController {
         // Segmented Control customization
         segmentedPager.segmentedControl.selectionIndicatorLocation = .down
         segmentedPager.segmentedControl.backgroundColor = .white
-        segmentedPager.segmentedControl.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.black]
-        segmentedPager.segmentedControl.selectedTitleTextAttributes = [NSForegroundColorAttributeName : UIColor.orange]
+        segmentedPager.segmentedControl.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
+        segmentedPager.segmentedControl.selectedTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.orange]
         segmentedPager.segmentedControl.selectionStyle = .fullWidthStripe
         segmentedPager.segmentedControl.selectionIndicatorColor = .orange
     }
@@ -55,7 +55,7 @@ class MXViewController: MXSegmentedPagerController {
         return ["Table", "Web", "Text"][index]
     }
     
-    override func segmentedPager(_ segmentedPager: MXSegmentedPager, didScrollWith parallaxHeader: MXParallaxHeader) {
+    override func segmentedPager(_ segmentedPager: MXSegmentedPager, didEndDraggingWith parallaxHeader: MXParallaxHeader) {
         print("progress \(parallaxHeader.progress)")
     }
 }
